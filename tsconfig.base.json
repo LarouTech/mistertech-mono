@@ -13,6 +13,7 @@
     "lib": ["es2017", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
+    "outDir": "public",
     "baseUrl": ".",
     "paths": {
       "@mistertech-mono/my-button": ["libs/my-button/src/index.ts"]
