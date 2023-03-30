@@ -11,6 +11,6 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     const test = testLibrary();
-    console.log(test);
+    console.log({ testLib: test });
   }
 }
