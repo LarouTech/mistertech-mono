@@ -1,0 +1,64 @@
+{
+  "name": "nhl-api-nest",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/nhl-api-nest/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/webpack:webpack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "target": "node",
+        "compiler": "tsc",
+        "outputPath": "dist/apps/nhl-api-nest",
+        "main": "apps/nhl-api-nest/src/main.ts",
+        "tsConfig": "apps/nhl-api-nest/tsconfig.app.json",
+        "assets": ["apps/nhl-api-nest/src/assets"],
+        "isolatedConfig": true,
+        "webpackConfig": "apps/nhl-api-nest/webpack.config.js"
+      },
+      "configurations": {
+        "development": {},
+        "production": {}
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "nhl-api-nest:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "nhl-api-nest:build:development"
+        },
+        "production": {
+          "buildTarget": "nhl-api-nest:build:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/nhl-api-nest/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "apps/nhl-api-nest/jest.config.ts",
+        "passWithNoTests": true
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "codeCoverage": true
+        }
+      }
+    }
+  },
+  "tags": []
+}
