@@ -2,7 +2,9 @@
   "name": "mistertech-mono",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "build": "ng build --output public"
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "~15.2.0",
