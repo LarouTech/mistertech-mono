@@ -15,8 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@mistertech-mono/my-button": ["libs/my-button/src/index.ts"],
-      "@mistertech-mono/team-interface": ["libs/team-interface/src/index.ts"]
+      "@mistertech-mono/my-button": ["libs/my-button/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
