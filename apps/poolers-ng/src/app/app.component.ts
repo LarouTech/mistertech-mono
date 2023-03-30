@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { testLibrary } from '@mistertech/test-library';
 
 @Component({
   selector: 'mistertech-mono-root',
@@ -9,6 +10,7 @@ export class AppComponent implements OnInit {
   title = 'poolers-ng';
 
   ngOnInit(): void {
-    return;
+    const test = testLibrary();
+    console.log(test);
   }
 }

@@ -16,7 +16,8 @@
     "outDir": "public",
     "baseUrl": ".",
     "paths": {
-      "@mistertech-mono/my-button": ["libs/my-button/src/index.ts"]
+      "@mistertech-mono/my-button": ["libs/my-button/src/index.ts"],
+      "@mistertech/test-library": ["libs/test-library/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
